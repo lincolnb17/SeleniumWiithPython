@@ -5,7 +5,6 @@ driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 ##to opern webpage and print the title of the page
 
 driver.get("https://www.youtube.com")
-
-mytitle = driver.title()
-print(mytitle)
+print(driver.title) #returns Tile of the current page
+print(driver.current_url) #retuns url of the current page
 driver.close(10)
