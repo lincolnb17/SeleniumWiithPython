@@ -1,4 +1,5 @@
 from selenium import webdriver
+import time
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -22,5 +23,6 @@ def simpleTest(username,password):
 
 for x in range(5):
     simpleTest(username[x],password[x])
+    time.sleep(5) #waits 5 sec for next iterations
     
     
